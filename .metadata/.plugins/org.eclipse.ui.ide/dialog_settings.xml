@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="245" key="DIALOG_Y_ORIGIN"/>
+		<item value="590" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\Android\new-git\ide-demo"/>
+			<item value="E:\Android\new\im\Openfire-master"/>
+			<item value="E:\Android\录屏大师\海外版-阿里百川用户反馈\feedback_sdk_basic_demo\feedback demo  eclipse project"/>
+			<item value="E:\ScreenRecordMaster 2016-05-17 13-12\ScreenRecordMaster"/>
+			<item value="E:\ScreenRecordMaster-hw"/>
+			<item value="E:\Android\new\web\Webviewtest"/>
+			<item value="E:\Android\new_\[www.java1234.com]就业项目-博客系统第26讲源码及文档"/>
+			<item value="E:\ScreenRecordMaster 2016-04-27 13-09\ScreenRecordMaster"/>
+			<item value="E:\ScreenRecordMaster 2016-04-27 13-09"/>
+			<item value="E:\Android\new_2"/>
+			<item value="E:\ScreenRecordMaster 2016-04-15 09-04"/>
+			<item value="G:\新建\0000\Android 屏幕适配源码\android-screen"/>
+			<item value="G:\Developing\Android Project\社交与通讯\腾讯微博小清新客户端\傻逼微博"/>
+			<item value="G:\Developing\Android Project\社交与通讯\DevStore Android源码之陌陌源码 2\immomo"/>
+			<item value="E:\Android\new\media-edit\avccodecDemo"/>
+			<item value="E:\ScreenRecordMaster 2016-04-15 09-04\ScreenRecordMaster"/>
+			<item value="E:\Android\new\api\java-api"/>
+			<item value="E:\ScreenRecordMaster 2016-04-14 09-08\ScreenRecordMaster"/>
+			<item value="F:\Android\new\api\java-api"/>
+			<item value="F:\ScreenRecordMaster 2016-04-11 10-06\ScreenRecordMaster"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1454549221069" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
+			<item value="org.eclipse.ui.Examples"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="301" key="DIALOG_Y_ORIGIN"/>
+		<item value="536" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

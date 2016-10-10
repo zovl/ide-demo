@@ -1,0 +1,191 @@
+package com.fmscreenrecord.activity;
+
+/**
+ * 设置页
+ * @author lin
+ * Creat:2014-12
+ * Refactor:2014-12
+ */
+
+import java.io.File;
+import java.lang.reflect.InvocationTargetException;
+import java.util.LinkedList;
+import java.util.List;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.PendingIntent;
+import android.content.ActivityNotFoundException;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.graphics.Bitmap;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.webkit.DownloadListener;
+import android.webkit.JsPromptResult;
+import android.webkit.JsResult;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.fmscreenrecord.app.ExApplication;
+import com.fmscreenrecord.config.XmlFileWriter;
+import com.fmscreenrecord.floatview.FloatContentView;
+import com.fmscreenrecord.record.RecordAction;
+import com.fmscreenrecord.service.ScreenRECService;
+import com.fmscreenrecord.update.Update;
+import com.fmscreenrecord.update.UpdateTask;
+import com.fmscreenrecord.utils.MResource;
+import com.fmscreenrecord.utils.MinUtil;
+import com.fmscreenrecord.utils.OpenFloatView;
+import com.fmscreenrecord.utils.RUtils;
+import com.fmscreenrecord.utils.RecordVideo;
+import com.fmscreenrecord.utils.SharedPreferencesUtils;
+import com.fmscreenrecord.utils.StoreDirUtil;
+import com.fmscreenrecord.utils.ViewUtils;
+import com.screeclibinvokehw.R;
+import com.umeng.analytics.MobclickAgent;
+
+public class VideoApplicationActivity extends Activity {
+
+	private static final String TAG = VideoApplicationActivity.class.getSimpleName();
+
+	private WebView webView;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fm_videoapplication);
+
+		webView = (WebView) findViewById(R.id.webview);
+		webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+		WebSettings webSettings = webView.getSettings();
+		webSettings.setJavaScriptEnabled(true);
+		webSettings.setAllowFileAccess(true);
+		webSettings.setSupportZoom(true);
+		webSettings.setDefaultZoom(WebSettings.ZoomDensity.MEDIUM);
+		webSettings.setBuiltInZoomControls(true);
+		webSettings.setDefaultFontSize(20);
+		webSettings.setUseWideViewPort(true);
+		webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+		webSettings.setLoadWithOverviewMode(true);
+		// setZoomControlGone(webView);
+		webView.setDownloadListener(new DownloadListener() {
+
+			@Override
+			public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+				
+			}
+		});
+
+		webView.loadUrl("http://54.183.164.122");
+		webView.setWebViewClient(new WebViewClient() {
+			@Override
+			public boolean shouldOverrideUrlLoading(WebView view, String url) {
+				view.loadUrl(url);
+				return true;
+			}
+
+			@Override
+			public void onPageStarted(WebView view, String url, Bitmap favicon) {
+				super.onPageStarted(view, url, favicon);
+			}
+
+			@Override
+			public void onPageFinished(WebView view, String url) {
+				super.onPageFinished(view, url);
+			}
+
+			@Override
+			public void onLoadResource(WebView view, String url) {
+				super.onLoadResource(view, url);
+			}
+
+			@Override
+			public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+				super.onReceivedError(view, errorCode, description, failingUrl);
+			}
+
+		});
+
+		webView.setWebChromeClient(new WebChromeClient() {
+			@Override
+			public boolean onJsAlert(WebView view, String url, String message, final JsResult result) {
+				return super.onJsAlert(view, url, message, result);
+			}
+
+			@Override
+			public boolean onJsConfirm(WebView view, String url, String message, final JsResult result) {
+				return super.onJsConfirm(view, url, message, result);
+			}
+
+			@Override
+			public boolean onJsPrompt(WebView view, String url, String message, String defaultValue, final JsPromptResult result) {
+				return super.onJsPrompt(view, url, message, defaultValue, result);
+			}
+
+			@Override
+			public void onProgressChanged(WebView view, int newProgress) {
+				super.onProgressChanged(view, newProgress);
+			}
+
+			@Override
+			public void onReceivedTitle(WebView view, String title) {
+				super.onReceivedTitle(view, title);
+			}
+		});
+	}
+
+	@Override
+	protected void onDestroy() {
+
+		if (webView != null) {
+			webView.clearHistory();
+			webView.removeAllViewsInLayout();
+			webView.clearDisappearingChildren();
+			webView.clearFocus();
+			webView.clearView();
+			webView.loadUrl("");
+			webView.destroy();
+			try {
+				webView.getClass().getMethod("destroy").invoke(webView, (Object[]) null);
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				e.printStackTrace();
+			} catch (NoSuchMethodException e) {
+				e.printStackTrace();
+			}
+		}
+		super.onDestroy();
+	}
+	}
+}

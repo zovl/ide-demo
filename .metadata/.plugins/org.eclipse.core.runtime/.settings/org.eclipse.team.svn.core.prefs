@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/1094c72689d4001511aefe4b7868ef13=1094c72689d4001511aefe4b7868ef13;svn\://192.168.28.9/sysj/lpds/ScreenRecordMaster;svn\://192.168.28.9/sysj/lpds/ScreenRecordMaster;branches;tags;trunk;true;da0986fb-5226-48e4-818e-bbc9f29ab558;svn\://192.168.28.9/sysj;;false;<svn\://192.168.28.9\:3690> /var/svn/svnrepos/sysj;;0
+repositories/205a549388d300151e83f8a231479e39=205a549388d300151e83f8a231479e39;svn\://192.168.28.9/sysj/lpds;svn\://192.168.28.9/sysj/lpds;branches;tags;trunk;true;;;;false;;;0
+repositories/804fd691deca00151849cc3da11a57c6=804fd691deca00151849cc3da11a57c6;svn\://192.168.28.9/sysj/a_sysj/ActionBarSherlock;svn\://192.168.28.9/sysj/a_sysj/ActionBarSherlock;branches;tags;trunk;true;da0986fb-5226-48e4-818e-bbc9f29ab558;svn\://192.168.28.9/sysj;;false;;;0
+repositories/904b506c89d300151e83f8a231479e39=904b506c89d300151e83f8a231479e39;svn\://192.168.28.9/sysj/lpds/;svn\://192.168.28.9/sysj/lpds/;branches;tags;trunk;true;;;;false;;;0
+repositories/905e4f31e1fe0015145ec252ae9e8c49=905e4f31e1fe0015145ec252ae9e8c49;http\://ranfi.com\:8081/svn/repos/Client/Android/virgo;http\://ranfi.com\:8081/svn/repos/Client/Android/virgo;branches;tags;trunk;true;;;;false;;;0
+repositories/a019e13085db001516c58dd45c8693bb=a019e13085db001516c58dd45c8693bb;svn\://192.168.28.9/sysj/a_lpds_hw;svn\://192.168.28.9/sysj/a_lpds_hw;branches;tags;trunk;true;da0986fb-5226-48e4-818e-bbc9f29ab558;svn\://192.168.28.9/sysj;;false;<svn\://192.168.28.9\:3690> /var/svn/svnrepos/sysj;;0
+repositories/b096820689d300151e83f8a231479e39=b096820689d300151e83f8a231479e39;svn\://192.168.28.9/sysj/lpds/;svn\://192.168.28.9/sysj/lpds/;branches;tags;trunk;true;;;;false;;;0
+repositories/c0b1ddfdbbff00151f7aa836884c135b=c0b1ddfdbbff00151f7aa836884c135b;svn\://192.168.28.9/sysj/lpds/ScreenRecordMaster;svn\://192.168.28.9/sysj/lpds/ScreenRecordMaster;branches;tags;trunk;true;da0986fb-5226-48e4-818e-bbc9f29ab558;svn\://192.168.28.9/sysj;;false;;;0
+repositories/d0b3e70e38d900151916ca8aef0fbd9c=d0b3e70e38d900151916ca8aef0fbd9c;svn\://192.168.28.9/sysj/a_sysj/VideoApplication;svn\://192.168.28.9/sysj/a_sysj/VideoApplication;branches;tags;trunk;true;da0986fb-5226-48e4-818e-bbc9f29ab558;svn\://192.168.28.9/sysj;;false;<svn\://192.168.28.9\:3690> /var/svn/svnrepos/sysj;;0
+repositories/f03eb7bdf6fa0015113e83188fb43883=f03eb7bdf6fa0015113e83188fb43883;http\://172.18.8.79\:85/svn/motionoa;http\://172.18.8.79\:85/svn/motionoa;branches;tags;trunk;true;;;;false;;;0

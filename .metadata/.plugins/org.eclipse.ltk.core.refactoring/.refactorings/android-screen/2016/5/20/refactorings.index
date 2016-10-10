@@ -1,0 +1,17 @@
+1462779134525	Copy compilation unit
+1462779303673	Delete element
+1462779450780	Delete element
+1462779483434	Delete element
+1462779486375	Delete element
+1462779655753	Rename local variable 'targets'
+1462779759859	Rename field 'width'
+1462779775480	Delete element
+1462779827990	Delete element
+1462779881569	Rename field 'type_dp'
+1462779886965	Rename field 'type_px'
+1462780067398	Rename local variable 'key'
+1462780145010	Rename local variable 'strKey'
+1462780309412	Rename local variable 'file'
+1462780316926	Rename local variable 'dimensFile'
+1462780381632	Rename type 'DimensUtils'
+1462780388352	Rename type 'FileUtils'

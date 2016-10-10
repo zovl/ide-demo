@@ -1,0 +1,670 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/fm_bar_backgroudn"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/setting"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.3"
+                    android:background="#949494" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha="0.8"
+                            android:text="@string/no_float_mode"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:alpha="0.5"
+                            android:text="@string/no_float_mode_child"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/fm_show_float_view_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:checked="false"
+                        android:scaleX="0.60"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.3"
+                    android:background="#949494" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+                        android:alpha="0.8"
+                        android:text="@string/sound_record"
+                        android:textSize="17sp" />
+
+                    <CheckBox
+                        android:id="@+id/fm_record_sound_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:checked="true"
+                        android:scaleX="0.60"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.3"
+                    android:background="#949494" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha="0.8"
+                            android:text="@string/shake_record"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:alpha="0.5"
+                            android:text="@string/shake_record_child"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/fm_yahangjieping_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:checked="false"
+                        android:scaleX="0.60"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.3"
+                    android:background="#949494" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+                        android:alpha="0.8"
+                        android:text="@string/open_the_camera"
+                        android:textSize="17sp" />
+
+                    <CheckBox
+                        android:id="@+id/fm_show_front_camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:checked="false"
+                        android:scaleX="0.60"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.3"
+                    android:background="#949494" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha="0.8"
+                            android:text="@string/show_touch"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:alpha="0.5"
+                            android:text="@string/show_touch_child"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/fm_showptouch_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:checked="false"
+                        android:scaleX="0.60"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha="0.8"
+                            android:text="@string/start_scan_game"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:alpha="0.5"
+                            android:maxLines="1"
+                            android:text="@string/start_scan_game_child"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/fm_gamelistnotify_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:checked="true"
+                        android:paddingRight="-5dp"
+                        android:scaleX="0.60"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.3"
+                    android:background="#949494" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:alpha="0.8"
+                            android:text="@string/record_jump"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dp"
+                            android:alpha="0.5"
+                            android:maxLines="1"
+                            android:text="@string/record_jump_child"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/fm_recordgoto_videomanage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="-8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:checked="true"
+                        android:scaleX="0.60"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.3"
+                    android:background="#949494" >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="10"
+                        android:alpha="0.8"
+                        android:text="@string/Accept_the_push"
+                        android:textSize="17sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_Push_Notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_check3"
+                        android:button="@null"
+                        android:scaleX="0.6"
+                        android:scaleY="0.55" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fm_quality_of_video_linearlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_selector_linearlayout"
+                    android:orientation="horizontal"
+                    android:paddingBottom="18dp"
+                    android:paddingTop="18dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="10"
+                        android:alpha="0.8"
+                        android:text="@string/quality_select"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/fm_quality_of_video_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="20dp"
+                        android:alpha="0.8"
+                        android:text="@string/h_quality"
+                        android:textColor="#3fa7fe"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@android:id/list"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="3dip"
+                    android:cacheColorHint="#00000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fm_choose_language"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector_linearlayout"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="10"
+                    android:alpha="0.8"
+                    android:text="@string/choose_language"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="-8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_check3"
+                    android:button="@null"
+                    android:checked="true"
+                    android:scaleX="0.60"
+                    android:scaleY="0.55"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="#949494" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/fm_help"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector_linearlayout"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="10"
+                    android:alpha="0.8"
+                    android:text="@string/help_and_tutorials"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="-8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_check3"
+                    android:button="@null"
+                    android:checked="true"
+                    android:scaleX="0.60"
+                    android:scaleY="0.55"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="#949494" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/fm_checkviupdate_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:background="@drawable/btn_selector_linearlayout"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="17dp"
+                    android:text="@string/versions_update"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/fm_newversion_linearlayout"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/noti_bt_start"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/fm_sdversion_linearlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:gravity="right"
+                        android:text="@string/latest_version"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="#949494" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/fm_open_floatview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:background="@drawable/btn_selector_linearlayout"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="4"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="17dp"
+                    android:text="@string/open_floate_view"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical|right"
+                    android:text=">>>>"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fm_invite_friend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:background="@drawable/btn_selector_linearlayout"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="4"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="17dp"
+                    android:text="@string/invite_friends"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/fm_open_floatview_view"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:alpha="0.3"
+                android:background="#949494" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/fm_aboutus_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:background="@drawable/btn_selector_linearlayout"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="4"
+                    android:paddingBottom="17dp"
+                    android:paddingTop="17dp"
+                    android:text="@string/about_us"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

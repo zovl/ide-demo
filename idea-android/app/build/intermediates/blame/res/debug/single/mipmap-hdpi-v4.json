@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\Android\\new\\00\\android-idea-gradle-demo\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\Android\\new\\00\\android-idea-gradle-demo\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Android\\new-git\\ide-demo\\idea-android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "E:\\Android\\new-git\\ide-demo\\idea-android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    }
+]

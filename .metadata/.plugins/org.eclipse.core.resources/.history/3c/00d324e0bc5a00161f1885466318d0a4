@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Recording Master</string>
+    <string name="fm_app_name">Recording Master</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="fb_fragment_activity">使用 SDK Fragment</string>
+    <string name="sdk_fb_activity">使用 SDK Activity</string>
+    <string name="multi_conversation_activity">多会话模式</string>
+    <string name="title_item_list">反馈列表</string>
+    <string name="fm_video_item_url_share">一键分享</string>
+    <string name="Accept_the_push">是否接受推送</string>
+    <string name="fm_go_to_sdcard">Storage path:/sdcard/LuPingDashi</string>
+    <string name="Nick_Name">Nickname</string>
+    <string name="Loading">Loading...</string>
+    <string name="gender">sex</string>
+    <string name="phone_num">phoneNum</string>
+    <string name="input_phone_num">请输入手机号</string>
+    <string name="input_phone_captcha">请输入验证码</string>
+    <string name="get_captcha">获取验证码</string>
+    <string name="captcha">验证码</string>
+    <string name="read_agree_agreement">Agree to Terms of use and Privacy policy.</string>
+    <string name="log_off">注销</string>
+    <string name="area">地区</string>
+    <string name="uploading_video">发布</string>
+    <string name="delete">Delete</string>
+    <string name="more">更多</string>
+    <string name="sm_item_demo">接口</string>
+    <string name="sm_item_auth">授权</string>
+    <string name="sm_item_wechat">微信</string>
+    <string name="sm_item_yixin">易信</string>
+    <string name="sm_item_customer">自定义接口</string>
+    <string name="sm_item_custom_fields">自定义分享内容</string>
+    <string name="sm_item_fl_weibo">关注新浪微博</string>
+    <string name="sm_item_fl_tc">关注腾讯微博</string>
+    <string name="sm_item_share_view">摇一摇截屏分享</string>
+    <string name="sm_item_visit_website">关注官方网站</string>
+    <string name="sm_item_about">Demo版本 Ver. %s</string>
+    <string name="plz_choose_wechat">请选择微信客户端完成操作</string>
+    <string name="get_token_format">获取%s的AccessToken</string>
+    <string name="get_user_info_format">获取%s授权用户资料</string>
+    <string name="get_other_info_format">获取%s其他用户资料</string>
+    <string name="share_to_format">分享到%s</string>
+    <string name="demo_share_all_gui">分享全部（有分享界面）</string>
+    <string name="demo_share_all">分享全部（无界面，直接分享）</string>
+    <string name="demo_get_access_token">获取AccessToken</string>
+    <string name="demo_get_my_info">获取授权用户资料</string>
+    <string name="demo_get_other_info">获取其他用户资料</string>
+    <string name="get_sina_friends_list">获取新浪微博关注列表</string>
+    <string name="get_tencent_friends_list">获取腾讯微博关注列表</string>
+    <string name="customer_douban">搜索用户</string>
+    <string name="customer_facebook">获取通知列表</string>
+    <string name="customer_nemb">获取推荐话题</string>
+    <string name="customer_renren">上传照片到用户的相册</string>
+    <string name="customer_sina">获取微博主页列表</string>
+    <string name="customer_qzone">发表日志到QQ空间</string>
+    <string name="customer_tencent">获取我的粉丝列表</string>
+    <string name="customer_twitter">获取主页列表</string>
+    <string name="customer_kaixin">获取可能认识的人</string>
+    <string name="customer_sohu">获取好友列表</string>
+    <string name="customer_youdao">获取笔记本列表</string>
+    <string name="customer_suishenkan">获取搜狐随身看书签列表</string>
+    <string name="customer_tumblr">获取Tumblr用户Post列表</string>
+    <string name="not_yet_authorized">尚未授权</string>
+    <string name="share_content">ShareSDK for Android不仅集成简单、支持如QQ好友、微信、新浪微博、腾讯微博等所有社交平台，而且还有强大的统计分析管理后台，实时了解用户、信息流、回流率、传播效应等数据，详情见官网http://mob.com @Mob移动开发者服务平台</string>
+    <string name="share_content_short">ShareSDK不仅集成简单、支持如微信、新浪微博、腾讯微博等平台，还有强大的统计分析管理后台，实时了解用户、信息流、回流率、传播效应等数据，详情见官网http://mob.com @Mob移动开发者服务平台</string>
+    <string name="evenote_title">ShareSDK是一个神奇的SDK</string>
+    <string name="update">文字分享</string>
+    <string name="image_upload">图片分享（本地图片）</string>
+    <string name="image_upload_bitmap">图片分享（Bitmap对象）</string>
+    <string name="image_upload_url">图片分享（网络图片）</string>
+    <string name="emoji_upload">表情分享（本地图片）</string>
+    <string name="emoji_upload_url">表情分享（网络图片）</string>
+    <string name="emoji_upload_bm">表情分享（Bitmap对象）</string>
+    <string name="music_upload">音乐分享</string>
+    <string name="video_upload">Share videos</string>
+    <string name="webpage_upload">网页分享（本地图片）</string>
+    <string name="webpage_upload_bitmap">网页分享（Bitmap对象）</string>
+    <string name="webpage_upload_url">网页分享（网络图片）</string>
+    <string name="app_upload">应用分享（携带文件）</string>
+    <string name="app_upload_extinfo">应用分享（携带脚本）</string>
+    <string name="file_upload">文件分享</string>
+    <string name="share_to_wechat">微信好友</string>
+    <string name="share_to_moment">微信朋友圈</string>
+    <string name="share_to_favorite">微信收藏</string>
+    <string name="wechat_demo_title">微信分享Demo标题</string>
+    <string name="qzone_add_blog_sample"><h1>QQ互联</h1><font color="red">轻松分享,</font><font color="green">快乐生活。</font><a href="http://connect.qq.com">详情请看。</a><img src="http://imgcache.qq.com/ptlogin/head/1_100.gif"></img></string>
+    <string name="wechat_client_is_not_installed_correctly">微信客户端未安装或版本太旧</string>
+    <string name="wechat_client_not_support_following_operation">微信客户端不支持第三方应用执行关注功能</string>
+    <string name="share_to_yixin">易信好友</string>
+    <string name="share_to_yixin_moment">易信朋友圈</string>
+    <string name="share_to_yixin_favorite">易信收藏</string>
+    <string name="yixin_demo_title">易信分享Demo标题</string>
+    <string name="receive_rewards">恭喜你得到%s个金币！</string>
+    <string name="buy_success">购买成功</string>
+    <string name="buy_failed">购买失败</string>
+    <string name="laiwang">来往</string>
+    <string name="qzone_customer_share_style">自定义QQ空间分享风格</string>
+    <string name="qq_share_way">请选择分享方式</string>
+    <string name="qq_share_from_qqlogin">QQ/QZone登录发微博</string>
+    <string name="qq_share_from_tlogin">腾讯微博登录发微博</string>
+    <string name="fm_question1">Why I have to Root ?</string>
+    <string name="fm_question2">How do I Root my device?</string>
+    <string name="fm_question3">Launch game at first or Recording Master?</string>
+    <string name="fm_question4">No floating widget after launched Recording Master?</string>
+    <string name="fm_question5">Why I can\'t just record internal audio but not just from Microphone?</string>
+    <string name="fm_question6">Why Recording Master fail to composite?</string>
+    <string name="fm_question7">Where is the default storage path?</string>
+    <string name="fm_question8">How much memory does Recording Master use?</string>
+    <string name="fm_question9">Where can I watch my recorded videos in Recording Master?</string>
+    <string name="fm_question10">录制的时候耗电情况如何</string>
+    <string name="fm_question11">在哪里看我录制的视频</string>
+    <string name="fm_question12">如何上传网上找的别人的视频</string>
+    <string name="p2refresh_head_load_more">Load more</string>
+    <string name="p2refresh_end_load_more">More</string>
+    <string name="p2refresh_end_click_load_more">Press to load</string>
+    <string name="p2refresh_release_refresh">Loose to refresh</string>
+    <string name="p2refresh_pull_to_refresh">Pull to refresh</string>
+    <string name="p2refresh_doing_head_refresh">Refreshing</string>
+    <string name="p2refresh_doing_end_refresh">loading</string>
+    <string name="p2refresh_refresh_lasttime">Lastest update</string>
+    <string name="fm_str_text">rename as</string>
+    <string name="fm_open_using">请选择应用打开</string>
+    <string name="fm_my_feed">我的反馈</string>
+    <string name="fm_my_feed_has_reply">您的反馈收到回复</string>
+    <string name="fm_back">返回</string>
+    <string name="fm_input_your_comment">请输入您的评论&amp;反馈</string>
+    <string name="fm_submit">提交</string>
+    <string name="fm_name">姓名</string>
+    <string name="fm_tip">tips</string>
+    <string name="fm_mobile">手机</string>
+    <string name="fm_system_setting">系统设置</string>
+    <string name="fm_display_method">显示方式</string>
+    <string name="fm_setting_feedback_bugs">反馈软件问题</string>
+    <string name="fm_setting_check_update">检查更新</string>
+    <string name="fm_setting_about">关于</string>
+    <string name="fm_faq"></string>
+    <string name="fm_version_mark">Release</string>
+    <string name="fm_already_download">下载中</string>
+    <string name="fm_error">错误</string>
+    <string name="fm_screenshot_setting">录制屏幕设置</string>
+    <string name="fm_screenshot_setting_1">基本设置</string>
+    <string name="fm_hide_notify_screenshot">隐藏通知栏</string>
+    <string name="fm_explorer_and_storage">录制设置</string>
+    <string name="fm_screenshot_pic_explorer">储存路径</string>
+    <string name="fm_help_and_about">帮助和关于</string>
+    <string name="fm_about_us">About Us </string>
+    <string name="fm_how_to_use_this_app">使用帮助</string>
+    <string name="fm_how_to_use_this_app_tip">如何使用本软件</string>
+    <string name="fm_take_anywhere_to_screenshot">录制屏幕提示</string>
+    <string name="fm_screenshot_done">完成</string>
+    <string name="fm_screenshot_tuya">涂鸦</string>
+    <string name="fm_full_screenshot">开始录屏</string>
+    <string name="fm_screenshot_cancel">Cancel</string>
+    <string name="fm_home_page_select_all_cancle">Unselect all</string>
+    <string name="new_features_introduce">1.新功能\n
+        2.新功能结束\n
+        新功能介绍</string>
+    <string name="fm_screenshot_started">Start recording</string>
+    <string name="fm_click_start_screenshot">Recording started</string>
+    <string name="fm_screenshot_failure">截图失败。</string>
+    <string name="fm_your_mobile_no_root">Your device has not been root yet.</string>
+    <string name="fm_root_your_mobile">Root this device</string>
+    <string name="fm_screenshot_save_success">saved successfully</string>
+    <string name="fm_explorer_screenshot">Preview recording</string>
+    <string name="fm_downloading">下载中…</string>
+    <string name="fm_new_function_index">新功能导航</string>
+    <string name="fm_login_and_taste">进入体验</string>
+    <string name="fm_action_bar_share_with">Share With</string>
+    <string name="fm_download_done_installing">下载完成，正在安装…</string>
+    <string name="fm_no_sdcard_cant_download_and_install">没有SDCard，不能下载安装APK文件。</string>
+    <string name="fm_start_download">开始下载.</string>
+    <string name="fm_downloading_done_per">正在下载，已完成</string>
+    <string name="fm_perhaps_download_please_wait">准备下载中，请稍后…</string>
+    <string name="fm_you_need_root">Please install this app after root the system.</string>
+    <string name="fm_app_root">申请权限</string>
+    <string name="fm_rotation">旋转</string>
+    <string name="fm_enlarge">放大</string>
+    <string name="fm_narrow">缩小</string>
+    <string name="fm_save">Save</string>
+    <string name="fm_share_to_email_title">来自Android版ScreenREC的录屏分享</string>
+    <string name="fm_share_def_content"><![CDATA[<a href="http://www.hianzuo.com/ScreenREC" target="_blank">ScreenREC</a> 用户给您分享了一段录屏视频。]]></string>
+    <string name="fm_about_root_phone">关于Root手机</string>
+    <string name="fm_test_version_label">发布版本：</string>
+    <string name="fm_version_checking">检查中…</string>
+    <string name="fm_version_update">更新</string>
+    <string name="fm_version_you_must_update">您必须更新最新版本</string>
+    <string name="fm_confirm_exit">你确定要退出这个程序？</string>
+    <string name="fm_your_network_unavailable">你的网络不可用</string>
+    <string name="fm_sure">Yes</string>
+    <string name="fm_cancel">Cancel</string>
+    <string name="fm_loading">载入中…</string>
+    <string name="fm_setting_network">网络设置</string>
+    <string name="UMEmptyFbNotAllowed">请输入您的反馈意见。</string>
+    <string name="UMContentTooLong">您的内容超过140个字符。</string>
+    <string name="UMFbList_ListItem_State_ReSend">失败，请重新发送</string>
+    <string name="UMFbList_ListItem_State_Sending">发送…</string>
+    <string name="UMFbList_ListItem_State_Resending">重发</string>
+    <string name="UMFbList_ListItem_State_Fail">失败</string>
+    <string name="UMFb_Atom_State_Fail">失败</string>
+    <string name="UMFb_Atom_State_Sending">发送…</string>
+    <string name="UMFb_Atom_State_Resend">失败，请重新发送，这将</string>
+    <string name="UMFeedbackUmengTitle">Feedback</string>
+    <string name="UMFeedbackListTitle">我要留言</string>
+    <string name="UMFeedbackConversationTitle">我要留言</string>
+    <string name="UMFeedbackTitle">你写的每一个字，将有利于我们。</string>
+    <string name="UMFeedbackContent">输入您的建议，在这里</string>
+    <string name="UMFeedbackSummit">提交</string>
+    <string name="UMFeedbackGoBack">返回</string>
+    <string name="UMFeedbackGotIt">明白了</string>
+    <string name="UMFeedbackSeeDetail">详细</string>
+    <string name="UMViewThread">查看主题</string>
+    <string name="UMNewReplyAlertTitle">您已经得到了回复</string>
+    <string name="UMDeleteThread">删除主题</string>
+    <string name="UMViewFeedback">查看留言</string>
+    <string name="UMDeleteFeedback">删除反馈</string>
+    <string name="UMResendFeedback">重新发送反馈</string>
+    <string name="UMDeleteMsg">删除邮件</string>
+    <string name="UMNewReplyFlick">有新的回复</string>
+    <string name="UMNewReplyTitle">有新的回复</string>
+    <string name="UMNewReplyHint">点击查看</string>
+    <string name="fm_share">Share</string>
+    <string name="fm_share_to_friend">分享给朋友</string>
+    <string name="fm_language">语言</string>
+    <string name="fm_other">其他</string>
+    <string name="fm_jindu">进度</string>
+    <string name="fm_gen_video_done">录制结束</string>
+    <string name="fm_record_done_and_click_open">Video composited, press Preview to check</string>
+    <string name="fm_record_done_and_click_open2">Video composited, press Notification bar to preview</string>
+    <string name="fm_record_succeed_and_toast_notif">Recording succeeded, the video saved in Videos>Local</string>
+    <string name="fm_record_fail_and_toast_notif">Sorry, fail to record,make sure you the system has been root</string>
+    <string name="fm_record_fail_and_toast_notif2">Sorry, fail to record, please try again after quit Recording Master </string>
+    <string name="fm_preview">Preview </string>
+    <string name="fm_share_to_firend">分享给朋友</string>
+    <string name="fm_slelct_to_share">Choose an action</string>
+    <string name="fm_record_tip">Recording tips</string>
+    <string name="fm_continue_record">Continue recording</string>
+    <string name="fm_about_root">About ROOT</string>
+    <string name="fm_i_know">I Know</string>
+    <string name="fm_dont_show_again">Do not display again</string>
+    <string name="fm_please_select">Choose an action</string>
+    <string name="fm_video_orientation">Choose recording orientation</string>
+    <string name="new_function_introduction">New features</string>
+    <string name="official_website">Official Website</string>
+    <string name="wechat_public_no">微信公众号</string>
+    <string name="qq_group">玩家QQ群</string>
+    <string name="cooperation_email">Coorporation Email</string>
+    <string name="recruitment_email">人才招聘</string>
+    <string name="privacy_disclaimer">Privacy Policy</string>
+    <string name="comments_and_feedback">Feedback</string>
+    <string name="wechat_noti">公众号fmsysj已复制，您可以在微信中直接粘贴搜索添加关注</string>
+    <string name="openwechat">打开微信</string>
+    <string name="setting_region">设置地区</string>
+    <string name="input_region">请输入地区</string>
+    <string name="setting_nickname">Nickname</string>
+    <string name="input_nickname">Please enter your nickname</string>
+    <string name="no_update">Maybe later</string>
+    <string name="now_update">Update now</string>
+    <string name="found_the_new_version">New version</string>
+    <string name="pause">Pause</string>
+    <string name="open_camera">Camera on</string>
+    <string name="close_camera">Camera off</string>
+    <string name="home_page">Home</string>
+    <string name="screen_video">Screenshot</string>
+    <string name="stop">Stop</string>
+    <string name="record_video">Record</string>
+    <string name="video_name">video name</string>
+    <string name="record_horizontal">Landscape Mode</string>
+    <string name="record_vertical">Portrait Mode</string>
+    <string name="record_hint"> Press left half of the button to pause , press right to stop. </string>
+    <string name="free_space">memory available</string>
+    <string name="networking_hint">Please connect to Internet</string>
+    <string name="login_hint">Please log in</string>
+    <string name="upload_video_hint">you haven\'t uploaded any videos Upload now.</string>
+    <string name="import_video">Import</string>
+    <string name="video">Videos</string>
+    <string name="select">Select</string>
+    <string name="local_video">Local</string>
+    <string name="cloud_video">published </string>
+    <string name="picture">Screenshots</string>
+    <string name="select_item">0 videos selected</string>
+    <string name="select_item_2"></string>
+    <string name="select_item_3"> videos</string>
+    <string name="select_item2"></string>
+    <string name="fm_home_page">Home</string>
+    <string name="fm_home_page_video">Videos</string>
+    <string name="fm_home_page_found">Discover</string>
+    <string name="fm_home_page_setting">Settings</string>
+    <string name="videoapplication">Video Application</string>
+    <string name="fm_home_page_select_all">Select all</string>
+    <string name="movet_2_sdcard">Move</string>
+    <string name="lately_click">Lastest click</string>
+    <string name="select_game_2_record">选择游戏开始录制</string>
+    <string name="go_to_desktop">回到桌面寻找</string>
+    <string name="no_hint_any_more">下次启动不再显示此页面</string>
+    <string name="often_click">Most click</string>
+    <string name="other_app_name">App name</string>
+    <string name="personal_center">Profile</string>
+    <string name="head_portrait">Photo</string>
+    <string name="add_now">Enter Now</string>
+    <string name="help_and_tutorials">Tutorial &amp; FAQ</string>
+    <string name="no_float_mode">Non-floating Widget Mode</string>
+    <string name="no_float_mode_child">Hide floating widget during recording</string>
+    <string name="sound_record">Audio Recording</string>
+    <string name="shake_record">Shake to Record</string>
+    <string name="shake_record_child">Shake the phone to start or stop recording.</string>
+    <string name="open_the_camera">Open Front Facing Camera</string>
+    <string name="show_touch">Display Touch Position</string>
+    <string name="show_touch_child">Show the touch position during recording</string>
+    <string name="start_scan_game">启动游戏扫描</string>
+    <string name="start_scan_game_child">开启后，每次点击录制按钮会进入游戏列表选择页</string>
+    <string name="record_jump">Back to Videos After Recording</string>
+    <string name="record_jump_child">Back to Videos after recording</string>
+    <string name="quality_select">Definition</string>
+    <string name="h_quality">HD</string>
+    <string name="s_quality">SD</string>
+    
+    <string name="sh_quality">超高清</string>
+    <string name="sh_quality_hint">该模式会对机型配置要求较高，视频文件也会稍大，如有卡顿请切换至超清</string>
+    
+    <string name="versions_update">Check for Update</string>
+    <string name="open_floate_view">Enable Floating Widget</string>
+    <string name="invite_friends">邀请好友</string>
+    <string name="about_us">About Us</string>
+    <string name="setting">Settings</string>
+    <string name="videoapplication">Video Application</string>
+    <string name="latest_version">Latest version</string>
+    <string name="about_root">关于root</string>
+    <string name="more_question">More Questions</string>
+    <string name="new_video">Lastest</string>
+    <string name="hot_video">Most viewed</string>
+    <string name="hot_search">Hot</string>
+    <string name="clear_search">Clear</string>
+    <string name="search_record">History</string>
+    <string name="select_game">Choose game</string>
+    <string name="input_search_content">search games</string>
+    <string name="lately_game">Latest games</string>
+    <string name="hot_game">Hot games</string>
+    <string name="game_name">Game name</string>
+    <string name="wonderful_Life">Moments</string>
+    <string name="video_share">Share videos</string>
+    <string name="video_size">size:</string>
+    <string name="video_title">title:</string>
+    <string name="video_show">Everyday life</string>
+    <string name="video_type">Type:</string>
+    <string name="select_video_type">choose type</string>
+    <string name="share_to_">Share on</string>
+    <string name="SYSJ">手游视界</string>
+    <string name="wechat_friend">微信好友</string>
+    <string name="moments">朋友圈</string>
+    <string name="qq_friend">QQ好友</string>
+    <string name="qq_zone">QQ空间</string>
+    <string name="goon_uoload">Continue</string>
+    <string name="uoloading">正在上传</string>
+    <string name="editor">Edit</string>
+    <string name="replay">Replay</string>
+    <string name="download_sysj">下载手游视界观看更多精彩视频</string>
+    <string name="download_sysj2">更多精彩视频，尽在手游视界</string>
+    <string name="donnload_now">Download now</string>
+    <string name="record_tutorials">Tutorial</string>
+    <string name="question_answer">FAQ</string>
+    <string name="video_editor">Edit</string>
+    <string name="start_time">Start</string>
+    <string name="select_time">Cover</string>
+    <string name="end_time">End</string>
+    <string name="screen_video_in">screenshot on:</string>
+    <string name="duration">Time length</string>
+    <string name="play_count">Play:0</string>
+    <string name="comment_count">Comments:0</string>
+    <string name="like_count">Like:0</string>
+    <string name="share_count">Share:0</string>
+    <string name="upload_time">Upload on:</string>
+    <string name="fm_size">Size</string>
+    <string name="editor_time">Modify time</string>
+    <string name="record_time">2015-07-01 00:00</string>
+    <string name="experience_immediately">Enjoy</string>
+    <string name="hot_video_title">Hot </string>
+    <string name="more_video">More>></string>
+    <string name="column">Blog</string>
+    <string name="column_title">舞大大学堂</string>
+    <string name="input_video_game_name">search games and videos</string>
+    <string name="wonderful_video">Wonderful videos</string>
+    <string name="phone_game">mobile games</string>
+    <string name="join_qq_ground_fail">未安装手机QQ或安装的版本不支持,请手动添加</string>
+    <string name="emailapp">请选择邮件类应用</string>
+    <string name="select_video_of_delect">Select the videos to delete</string>
+    <string name="select_picture_of_delect">Select the screenshots to delete</string>
+    <string name="select_video_of_save_sdcard">Select the videos to move to SD card</string>
+    <string name="cant_find_sdcard">Cannot find SD card, try again after check</string>
+    <string name="select_picture_of_save_sdcard">Please select screenshots</string>
+    <string name="fm_sure_delect">Confirm to delete </string>
+    <string name="fm_picture_nums"> screenshots selected?</string>
+    <string name="fm_picture_nums2"> screenshots selected</string>
+    <string name="fm_picture_nums3"> screenshots</string>
+    <string name="fm_video_nums"> videos?</string>
+    <string name="fm_video_nums2">videos selected</string>
+    <string name="fm_video_nums3">videos</string>
+    <string name="fm_clear_record">Clear</string>
+    <string name="fm_updating">Updating…</string>
+    <string name="fm_suer_install">请确保手机已安裝</string>
+    <string name="after_finishing_recording">Please try again after finishing recording</string>
+    <string name="after_finishing_recording2">Recording is in progress. Please try screenshot after recording.</string>
+    <string name="stop_recording">Stop recording</string>
+    <string name="upload_list">正在加载应用列表，请稍候...</string>
+    <string name="one_more_click_quit">One more click to quit Recording Master</string>
+    <string name="open_app_fail">抱歉，应用启动失败，请手动启动该应用</string>
+    <string name="set_phone">设置电话</string>
+    <string name="set_qq">设置QQ</string>
+    <string name="set_email">设置邮箱</string>
+    <string name="sex_man">Male</string>
+    <string name="sex_woman">Female</string>
+    <string name="updated_successfully">Modified successfully</string>
+    <string name="updated_failure">Fail to modify</string>
+    <string name="cant_find_sccard">Fail to search SD card, cannot save picture</string>
+    <string name="connect_servicer_fail">Fail to connect server</string>
+    <string name="head_image_size">Profile picture no more than 20KB</string>
+    <string name="input_correct_phone">请输入正确的手机号码</string>
+    <string name="operation_frequently">Too frequent operation, please try later</string>
+    <string name="phone_no_null">手机号不能为空</string>
+    <string name="verification_no_null">验证码不能为空</string>
+    <string name="try_again">重试</string>
+    <string name="account_has_been_registered">该账号已注册</string>
+    <string name="failed_to_get_verification_code">获取验证码失败，请重新获取验证码</string>
+    <string name="verification_code_sent_successfully">验证码发送成功</string>
+    <string name="input_sure_verification_code">请输入正确的验证码</string>
+    <string name="update_verification_code_sucess">提交验证码成功</string>
+    <string name="screenshot_succeeded">Screenshot succeeded!</string>
+    <string name="input_key_word">请输入关键词</string>
+    <string name="no_new_data">没有新数据啦</string>
+    <string name="no_new_data2">fully loaded</string>
+    <string name="null_of_the_area">地区不能为空</string>
+    <string name="null_of_the_nickname">昵称不能为空</string>
+    <string name="user_name_existence">用户名已经存在</string>
+    <string name="null_notify">不能为空</string>
+    <string name="input_correct_email">请输入正确的邮箱地址</string>
+    <string name="input_correct_phone_num">请输入正确的手机号码</string>
+    <string name="share_content_of_app">I got an appealing recording app, you can record phone screen easily, strongly recommended to have  a try！</string>
+    <string name="manual_operation">Sorry, you need to enable floating widgets mannually.</string>
+    <string name="recording_cant_modification">Recording is in progress. Please try again after recording.</string>
+    <string name="recording_cant_modification2">Recording is in progress. Please try screenshot after recording.</string>
+    <string name="share_content_of_video">I recorded a wonderful video by Recording Master, join me to have a look.</string>
+    <string name="video_editor_30">The video can be edited only when its length is longer than 30s</string>
+    <string name="prepare_share_for_qqzone">准备进行QQ空间分享...</string>
+    <string name="prepare_share_for_sinaweibo">准备进行新浪微博分享..</string>
+    <string name="prepare_share_for_wechat">准备进行微信分享..</string>
+    <string name="network_cant_work">Cannot connect to Internet, please try again after check</string>
+    <string name="input_game_title">Enter video title</string>
+    <string name="repetition_upload">视频已经上传到云端手游视界，不必重复上传</string>
+    <string name="upload_done">Uploading completed</string>
+    <string name="video_uploading">Other video uploading, please wait</string>
+    <string name="attention">Tips</string>
+    <string name="out_of_wifi_range">Your device has not conneted to Wifi, uploading video will consume mobile data traffic, still update?</string>
+    <string name="share_picture">I shared one picture.</string>
+    <string name="input_video_name">Video name</string>
+    <string name="null_of_video">Video name please</string>
+    <string name="video_of_the_same_name">The name cannot be same as the original one.</string>
+    <string name="video_editor_succeed">Clipped successfully</string>
+    <string name="video_editor_failure">Fail to clip</string>
+    <string name="file_name_existence">File name exists</string>
+    <string name="all"></string>
+    <string name="memory_used">memory used:</string>
+    <string name="residual">,remain</string>
+    <string name="delect_succeed">deleted successfully</string>
+    <string name="delect_statistics">Delete</string>
+    <string name="videos">this video</string>
+    <string name="move_file_2_sdcard">Confirm to move to SD card?</string>
+    <string name="moveing_file_2_sdcard">Moving to SD card, waiting…</string>
+    <string name="move_file_2_sdcard_succeed">The files have been successfully moved to SD card!</string>
+    <string name="out_of_free_space">Insufficient memory, please </string>
+    <string name="move_file_failure">Fail to move file</string>
+    <string name="open_sysj_app">是否打开手游视界客户端？</string>
+    <string name="download_sysj_app">您的设备还未安装手游视界客户端，是否下载手游视界官方最新版，开始您的视界之旅？</string>
+    <string name="fm_uploading">Uploading</string>
+    <string name="fm_uploading_cant_delect">The video is uploading</string>
+    <string name="fm_rename">Rename</string>
+    <string name="fm_inexistence">This video does not exist</string>
+    <string name="video_length_limit">Video time length cannot be shorter than 10s</string>
+    <string name="video_length_limit_max">Video size no bigger than 30 Minute</string>
+    <string name="video_size_limit">Video size no bigger than 800MB</string>
+    <string name="failed_to_screenshot">Failed to screenshot, make sure you the system has been root</string>
+    <string name="fm_ontinue">Continue</string>
+    <string name="fm_pause">Pause</string>
+    <string name="import_external_video">Import videos</string>
+    <string name="open_file_failure">Failed to open File Manager, please open it manually.</string>
+    <string name="nonsupport_shake_record">Sorry, this device does not support Shake to Record</string>
+    <string name="click_to_preview">Click to preview</string>
+    <string name="click_to_preview2">Render complete, preview your video here.</string>
+    <string name="stop_record">Stop recording</string>
+    <string name="fm_updateing">Updating…</string>
+    <string name="fm_updateing_cancle">Cancel update</string>
+    <string name="failed_to_update">Failed to update</string>
+    <string name="current_version">Current version:V</string>
+    <string name="lastest_version">Lastest version</string>
+    <string name="update_now">Update now？</string>
+    <string name="update_log">Update log:</string>
+    <string name="the_latest_version_is_running">The latest version is running</string>
+    <string name="miui_hint">"您的系统是MIUI，请保证您的系统是小米的开发版系统" + "\n"
+							+ "然后到“安全中心》授权管理》root权限管理》录屏大师》授权”" + "\n"
+							+ "再到“安全中心》应用权限管理》录屏大师》悬浮窗权限》允许”即可正常使用"</string>
+    <string name="download_360_root">Download 360 Super Root</string>
+    <string name="download_king_root">Download KingRoot</string>
+    <string name="download_baidu_root">Download Baidu OneKey Root</string>
+    <string name="huawei_hint">您所使用的是华为设备，须在: + \n + \n
+									+ "手机管家 》 设置 》 悬浮窗管理 》录屏大师 》 打勾  + \n
+									+ \n + 将浮窗打开才能正常使用</string>
+    <string name="miui_hint2">您的系统是MIUI，请到“安全中心》应用权限管理》录屏大师》悬浮窗权限》允许”即可正常使用</string>
+    <string name="space_checker">Cannot detect memory, please try again after check</string>
+    <string name="uploading_stop">上传停止</string>
+    <string name="uploading_succeed">Uploaded successfully, you can check in Published</string>
+    <string name="memory_is_lower_than_10">Avaliable memory is lower than 10%, you had better stop recording.</string>
+    <string name="memory_is_lower_than_05">Avaliable memory is lower than 5%, you had better stop recording.</string>
+    <string name="no_videos_yet">No videos yet</string>
+    <string name="no_screenshots_yet">No screenshots yet</string>
+    <string name="imported_successfully">Imported successfully</string>
+    <string name="import_videos">Import videos</string>
+    <string name="slide_up_or_down">Press left half of the button to pause , press right to stop. </string>
+    <string name="sliding_screen_prompts">To set just one mode on full screen</string>
+    <string name="use_help_attention_tips">Tips:</string>
+    <string name="use_help_attention"> Recording Master is compatible with Android 4.0+. Make sure your Android system has been root if it is between 4.0-5.0.</string>
+    <string name="how_root">How do I Root my device?</string>
+    <string name="tutorial_start_record">Press the recording button according to the App you want to record is Vertical or Horizontal orientation.</string>
+    <string name="tutorial_start_float">The floating widget will appear.</string>
+    <string name="tutorial_no_float">Still no floating widget even you have root the system?</string>
+    <string name="tutorial_show_float">After press floating widget, the overlay will display: Record,Screenshot, Home, Front Camera,  </string>
+    <string name="tutorial_on_floating_widgets">----------Non-floating widgets----------</string>
+    <string name="on_floating_widgets_start">In Non-floating widgets mode, press recording button to start recording.</string>
+    <string name="tutorial_start_recording">Press the Recording button to start recording,Press floating widgets while you are recording. Toggling pause button will pause recording and continue recording.</string>
+    <string name="tutorial_save_video">Press Stop button, the video will be saved to Videos.</string>
+    <string name="tutorial_share_video">Click Share button</string>
+    <string name="tutorial_share_video2">Enter video name, select video type and then press Share Now button</string>
+    <string name="tutorial_edit_video">Press Edit button, You can clip video , choose cover and dub.</string>
+    <string name="tutorial_start_recording_title">Start Recording</string>
+    <string name="tutorial_recording">Recording</string>
+    <string name="tutorial_save_video_title">Save Video</string>
+    <string name="tutorial_share_video_title">Share Video</string>
+    <string name="choose_language">Language</string>
+    <string name="choose_language_child_1">Auto Detection</string>
+    <string name="choose_language_child_2">English</string>
+    <string name="choose_language_child_3">繁体中文</string>
+    <string name="choose_language_child_4">简体中文</string>
+    <string name="choose_language_child_5">Bahasa Indonesia</string>
+    <string name="prepare_share_for_moments">准备朋友圈分享...</string>
+    <!-- 新功能介绍 -->
+    <string name="fm_new_function_1">1、录制暂停功能——可以在录制过程中随时随地的暂停录制，可以让您方便的跳过那些您不想录制进去的过程;</string>
+    <string name="fm_new_function_2">2、前置摄像头功能——可以在录制的时候露脸，会美化之后生成在视频里面;</string>
+    <string name="fm_new_function_3">3、Start recording</string>
+    <string name="fm_new_function_4">4、开始录制屏幕</string>
+    <string name="fm_start_record">开始录制屏幕</string>
+    <string name="fm_stop_record">停止录制屏幕</string>
+    <string name="fm_standard">SD</string>
+    <string name="fm_vivid">清晰</string>
+    <string name="fm_copy">复制</string>
+    <string name="serviceagreement">Terms of use</string>
+    <string name="using_agreement">      The FeimoTec.Co Privacy Policy\' describes how we treat
+        personal information when you use Recording Master (the "Software") and ifeimo.com (the "Site"), 
+        including information provided when you use this site and the software. 
+        The following describes our privacy policy.\n
+      Welcome to ifeimo.com. Your privacy is important to us. As such,
+        we provide this Policy explaining our online information practices 
+        and the choices you can make about the way your information is collected,
+        processed, maintained and disposed by FeimoTec.Co, including any services owned, 
+        operated or offered by or on behalf of FeimoTec.Co,and by third-party service 
+        providers if applicable.\n　　
+	We understand that the privacy of our users, subscribers, guests 
+          and/or visitors ("Members", "you" or "your") is very important. 
+          We have developed this Policy to ensure that your privacy is protected while 
+          using FeimoTec.Co\'s products. We reserve the right to change it at any time, 
+          and all changes are effective upon posting with notice to you./n
+          　   Owing to the global nature of FeimoTec.Co\'s business conducted over the internet, 
+          it is practically impossible for us to comply with all applicable laws / rules / regulations
+          (and the like) as may be prescribed by individual country/region/city. We endeavor to adopt internationally
+          recommended “Best Practices” whilst adhering to the Personal Data (Privacy) Ordinance.\n
+　             Operationally we are in compliance with, though not bound to do so, 
+ 	     the general requirements imposed by the Data Protection Principles generally 
+         recommended by the US-EU US-Swiss Safe Harbor Frameworks, Organization for 
+   	     Economic Cooperation &amp; Development, and by the Asia Pacific Economic 
+   	     Cooperation. In particular, we carry out Privacy Compliance Assessment exercise 
+   	     periodically to ensure compliance in respect of notice, choice, onward transfer,
+   	     security, data integrity, access and enforcement.\n
+　　	   This Privacy Policy applies to your use of FeimoTec. product. In addition, 
+ 		 where more detailed information is needed to explain our privacy practices, 
+ 		 we post supplementary privacy policy to describe how FeimoTec.Co processes 
+ 		 personal information. Please review and agree to those Supplementary Privacy Policy.\n
+　　1.About FeimoTec.Co and Your Information We Collect\n
+　	　FeimoTec.Co provides you with access to rich collection of resources, 
+	  including without limitation video recording and editing software, 
+	  downloadable resources, forums etc. In order to provide a full range of services, 
+	  we may ask you to create a FeimoTec.Co Account (the “Account”) to be our registered user. 
+	  The information we collect is very little. Only email address is required for 
+	  registering FeimoTec.Co.com.\n
+　　2.How We Use Your Information\n
+　 	　We may use the information you provide to fulfill your requests for our Services,
+  	 to respond to your inquiries about our offerings, to offer you other products or 
+  	 services that we believe may be of interest to you, to enforce the legal obligations 
+  	 that govern your use of our Site, to identify problems, to resolve complaint, 
+  	 disputes and/or for the purposes for which you provided the information.\n
+　	　You agree that we may use your information to improve our marketing and promotional 
+	 efforts, to analyze the web site usage, improve our content and product offerings, 
+	 and customize FeimoTec.Co\’s content, layout, and services. These uses can help us
+     improve our Site and Software and better tailor it to meet your needs.\n
+　　3.Cookies and Historical Information
+	　　Each time you access the Services, various information is gathered automatically,
+	 such as: domain, computer platform, browser type, IP address and place of origin. 
+	 We gather this information in order to administer and optimize the Services for you 
+	 and to diagnose problems with our Services and enhance your user experience.\n
+　　4.Our Disclosure and/or Shared Use of Your Information\n
+　	　Under no circumstance will FeimoTec.Co sell or transfer for monetary gains 
+	  your information to any unrelated third party without your permission, 
+	  but we may disclose your information to affiliates or unaffiliated third parties 
+	  if we believe in good faith that such disclosure is necessary: (a) to comply with
+	  the law or in response to a subpoena, court order, government administrative
+	  request or other due process; (b) to protect the interests, rights, safety,
+	  or property of FeimoTec.Co or others; (c) to enforce any terms of service 
+	  of FeimoTec.Co; (d) to provide you with the services or products requested 
+	  by you, and to perform other activities related to such services and products, 
+	  including billing and collection; (e) to provide you with information, 
+	  special offers, or promotions from FeimoTec.Co to which you consented. 
+	  FeimoTec.Co makes reasonable efforts to limit its designated service 
+	  providers\' disclosure of your information in the same manner as set forth in this paragraph.\n
+　　Further use and/or disclosure of your information by third parties is not the 
+	responsibility of FeimoTec.Co. Rather, such use and/or disclosure is governed
+	 by those parties\’ policies.\n
+　　5.Technical and/or Operational Security\n
+　	　We respect and recognize that personal data are vulnerable to security breach which,
+ 	  if taken place, may cause annoyance or even damages to you (conversely, our business 
+ 	  reputation), thus we take reasonably practical measures to protect your personal data.
+  	  However, given the realistic limitations (e.g. costs / timely delivery of security 
+  	  measures) and rapid revolution of technology, there is always the risk of such 
+   	 breach in which event we cannot be held liable.\n
+　　FeimoTec.Co has security measures in place to protect and prevent the loss, misuse, 
+	 and alteration of the information under our control. We use industry standard 
+	 efforts to safeguard the confidentiality of your personal identity information 
+	 such as encryption tools, secure server and firewall. While "absolutely 
+	 fail-safe security" does not exist, our technical experts work hard to ensure 
+	 your secure use of our services.\n
+　　6.Links to Third-Party Websites\n
+　	　FeimoTec.Co may provide links to third-party websites. 
+	 Since we do not control third-party sites and are not responsible for any information
+	 you may provide while on such sites, we encourage you to read the privacy policies
+	  on those web sites before providing any of your personal information on such sites.\n
+　　7.Your Agreement to This Policy\n
+		By using FeimoTec.Co\'s products and its Services, you understand that this
+	    Policy applies solely to information collected by FeimoTec.Co, and you agree
+	    to the collection, processing, retention and disposal of your information by 
+	    FeimoTec.Co as outlined herein.\n
+Recording Master\'s Terms of Use\n
+1. Terms\n
+By accessing this web site, you are agreeing to be bound by these web site Terms 
+and Conditions of Use, all applicable laws and regulations, and agree that you are
+ responsible for compliance with any applicable local laws. If you do not agree with
+  any of these terms, you are prohibited from using or accessing this site. 
+  The materials contained in this web site are protected by applicable copyright and 
+  trade mark law.\n
+2. Use License\n
+a.Permission is granted to temporarily download one copy of the materials (information 
+or software) on Feimo Tec .Co\'s web site for personal, non-commercial transitory viewing
+ only. This is the grant of a license, not a transfer of title, and under this license 
+ you may not:\n
+i.modify or copy the materials;\n
+ii. use the materials for any commercial purpose, or for any public display (commercial
+ or non-commercial);\n
+iii.attempt to decompile or reverse engineer any software contained onFeimo Tec .Co\'s 
+web site;\n
+iv. remove any copyright or other proprietary notations from the materials; or\n
+v.transfer the materials to another person or "mirror" the materials on any other server.\n
+
+b.This license shall automatically terminate if you violate any of these restrictions and may 
+be terminated by Feimo Tec .Co at any time. Upon terminating your viewing of these 
+materials or upon the termination of this license, you must destroy any downloaded 
+materials in your possession whether in electronic or printed format\n
+3. Disclaimer\n
+The materials on Feimo Tec .Co\'s web site are provided "as is". Feimo Tec .Co makes no
+ warranties, expressed or implied, and hereby disclaims and negates all other warranties,
+  including without limitation, implied warranties or conditions of merchantability, 
+  fitness for a particular purpose, or non-infringement of intellectual property or 
+  other violation of rights. Further, Feimo Tec .Co does not warrant or make any 
+  representations concerning the accuracy, likely results, or reliability of the use of 
+  the materials on its Internet web site or otherwise relating to such materials or on 
+  any sites linked to this site.\n
+4. Limitations\n
+In no event shall Feimo Tec .Co or its suppliers be liable for any damages (including, 
+without limitation, damages for loss of data or profit, or due to business interruption,)
+ arising out of the use or inability to use the materials on Feimo Tec .Co\'s Internet 
+ site, even ifFeimo Tec .Co or a Feimo Tec .Co authorized representative has been 
+ notified orally or in writing of the possibility of such damage. Because some 
+ jurisdictions do not allow limitations on implied warranties, or limitations of 
+ liability for consequential or incidental damages, these limitations may not apply to 
+ you.\n
+5. Revisions and Errata\n
+The materials appearing on Feimo Tec .Co\'s web site could include technical, 
+typographical, or photographic errors. Feimo Tec .Co does not warrant that any of 
+the materials on its web site are accurate, complete, or current. Feimo Tec .Co may 
+make changes to the materials contained on its web site at any time without notice. 
+Feimo Tec .Co does not, however, make any commitment to update the materials.\n
+6. Links\n
+Feimo Tec .Co has not reviewed all of the sites linked to its Internet web site and is 
+not responsible for the contents of any such linked site. The inclusion of any link does 
+not imply endorsement by Feimo Tec .Co of the site. Use of any such linked web site is 
+at the user\'s own risk.\n
+7. Site Terms of Use Modifications\n
+Feimo Tec .Co may revise these terms of use for its web site at any time without notice. 
+By using this web site you are agreeing to be bound by the then current version of these 
+Terms and Conditions of Use.\n</string>
+    <string name="fm_video_encoder">视频解码器选择</string>
+    <string name="fm_video_encoder_tip">录制的视频效果不好时，请选择</string>
+    <string name="fm_login_label_username">帐号</string>
+    <string name="fm_login_label_password">密码</string>
+    <string name="login_label_signin">Log in</string>
+    <string name="login_by_others">Log with</string>
+    <string name="login_status_logging_in">Logging...</string>
+    <string name="fm_login_username_hint">Email或手机号</string>
+    <string name="fm_login_register_link">没有帐号？ <a href="#">注册</a></string>
+    <string name="fm_userid_found">用户信息已存在，正在跳转登录操作…</string>
+    <string name="fm_logining">使用%s帐号登录中…</string>
+    <string name="fm_auth_cancel">授权操作已取消</string>
+    <string name="fm_auth_error">授权操作遇到错误</string>
+    <string name="fm_auth_complete">授权成功，正在跳转登录操作…</string>
+    <string name="weibo_oauth_regiseter">应用授权</string>
+    <string name="website">http://www.shareSDK.cn</string>
+    <string name="weibo_upload_content">分享图片</string>
+    <string name="wechat_client_inavailable">目前您的微信版本过低或未安装微信，需要安装微信才能使用</string>
+    <string name="google_plus_client_inavailable">Google+ 版本过低或者没有安装，需要升级或安装Google+才能使用！</string>
+    <string name="qq_client_inavailable">QQ 版本过低或者没有安装，需要升级或安装QQ才能使用！</string>
+    <string name="pinterest_client_inavailable">Pinterest版本过低或者没有安装，需要升级或安装Pinterest才能使用！</string>
+    <string name="instagram_client_inavailable">Instagram版本过低或者没有安装，需要升级或安装Instagram才能使用！</string>
+    <string name="yixin_client_inavailable">目前您的易信版本过低或未安装，需要安装易信才能使用</string>
+    <string name="line_client_inavailable">目前您的Line版本过低或未安装，需要安装Line才能使用</string>
+    <string name="kakaotalk_client_inavailable">目前您的KakaoTalk版本过低或未安装，需要安装KakaoTalk才能使用</string>
+    <string name="kakaostory_client_inavailable">目前您的KakaoStory版本过低或未安装，需要安装KakaoStory才能使用</string>
+    <string name="sinaweibo">新浪微博</string>
+    <string name="tencentweibo">腾讯微博</string>
+    <string name="qzone">QQ空间</string>
+    <string name="wechat">微信好友</string>
+    <string name="wechatmoments">微信朋友圈</string>
+    <string name="wechatfavorite">微信收藏</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="renren">人人网</string>
+    <string name="kaixin">开心网</string>
+    <string name="email">邮箱</string>
+    <string name="shortmessage">信息</string>
+    <string name="sohumicroblog">搜狐微博</string>
+    <string name="sohusuishenkan">搜狐随身看</string>
+    <string name="neteasemicroblog">网易微博</string>
+    <string name="douban">豆瓣</string>
+    <string name="youdao">有道云笔记</string>
+    <string name="evernote">印象笔记</string>
+    <string name="linkedin">领英</string>
+    <string name="googleplus">Google+</string>
+    <string name="foursquare">FourSquare</string>
+    <string name="qq">QQ</string>
+    <string name="pinterest">Pinterest</string>
+    <string name="flickr">Flickr</string>
+    <string name="tumblr">Tumblr</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="vkontakte">VK</string>
+    <string name="instagram">Instagram</string>
+    <string name="yixin">易信</string>
+    <string name="yixinmoments">易信朋友圈</string>
+    <string name="mingdao">明道</string>
+    <string name="kakaotalk">KakaoTalk</string>
+    <string name="kakaostory">KakaoStory</string>
+    <string name="line">Line</string>
+    <string name="share_to_qzone">分享到QQ空间</string>
+    <string name="share_to_qq">分享到QQ</string>
+    <string name="mingdao_share_content">网页分享</string>
+    <string name="share_to_mingdao">分享到明道</string>
+    <string name="share_to_qzone_default">来自%s的分享</string>
+    <string name="use_login_button">请改用“登录”按钮</string>
+    <string name="use_login_by_phone">手机快捷登录</string>
+    <string name="use_login_by_phone2">手机登录</string>
+    <string name="use_login_by_qq">QQ登录</string>
+    <string name="use_login_by_wechat">微信登录</string>
+    <string name="use_login_by_sina">新浪登录</string>
+
+    <string-array name="title_spinner">
+        <item>请选择:</item>
+        <item>试玩评测</item>
+        <item>新手体验视频</item>
+        <item>高分秀</item>
+        <item>大神操作秀</item>
+        <item>攻略解说视频</item>
+    </string-array>
+
+</resources>

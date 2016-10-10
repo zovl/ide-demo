@@ -1,0 +1,384 @@
+package com.fmscreenrecord.activity;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler.Callback;
+import android.os.Message;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.Window;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.PlatformActionListener;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.sina.weibo.SinaWeibo;
+import cn.sharesdk.tencent.qq.QQ;
+import cn.sharesdk.wechat.friends.Wechat;
+import cn.smssdk.framework.utils.UIHandler;
+
+import com.fmscreenrecord.app.ExApplication;
+import com.fmscreenrecord.entity.UserEntity;
+import com.fmscreenrecord.entity.response.EmptyEntity;
+import com.fmscreenrecord.framework.TBaseActivity;
+import com.fmscreenrecord.utils.JsonHelper;
+import com.fmscreenrecord.utils.MResource;
+import com.fmscreenrecord.utils.MinUtil;
+import com.fmscreenrecord.utils.RUtils;
+import com.screeclibinvoke.R;
+
+public class LoginActivity extends TBaseActivity implements View.OnClickListener, Callback, PlatformActionListener {
+
+	private FrameLayout qqIb, weiboIb, wechat, phoneLoginTv;
+	private LinearLayout loginBack;
+	private RelativeLayout background;
+	Bitmap bitmap;
+	private int openState;
+	private Context mContext;
+
+	// 客户端标示
+	private String client;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
+		setStatusBarTintResource(R.color.log_tran_background);
+		mContext = getApplicationContext();
+		init();
+		initView();
+		setbackgound();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+
+	private void init() {
+		ShareSDK.initSDK(this);
+		background = (RelativeLayout) findViewById(R.id.fm_login_bc);
+		loginBack = (LinearLayout) findViewById(R.id.login_back);
+		loginBack.setOnClickListener(this);
+
+		qqIb = (FrameLayout) findViewById(R.id.login_qq_ib);
+		qqIb.setOnClickListener(this);
+
+		weiboIb = (FrameLayout) findViewById(R.id.login_weibo_ib);
+		weiboIb.setOnClickListener(this);
+
+		wechat = (FrameLayout) findViewById(R.id.login_wechat_ib);
+		wechat.setOnClickListener(this);
+
+		phoneLoginTv = (FrameLayout) findViewById(R.id.activity_login_phone_tv);
+		phoneLoginTv.setOnClickListener(this);
+	}
+
+	private void initView() {
+
+	}
+
+	/**
+	 * 设置背景图片
+	 */
+	@SuppressLint("NewApi")
+	// TODO
+	@SuppressWarnings("deprecation")
+	private void setbackgound() {
+
+		BitmapFactory.Options opt = new BitmapFactory.Options();
+		opt.inPreferredConfig = Bitmap.Config.ARGB_8888;
+		opt.inPurgeable = true;
+		opt.inInputShareable = true;
+		InputStream is;
+
+		is = mContext.getResources().openRawResource(R.drawable.login_bg);
+		bitmap = BitmapFactory.decodeStream(is, null, opt);
+
+		background.setBackground(new BitmapDrawable(mContext.getResources(), bitmap));
+
+		try {
+			//
+			is.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void onClick(View view) {
+
+		if (view == loginBack) {//
+			finish();
+		} else if (view == qqIb) {// QQ登陆
+			client = "QQ";
+			MinUtil.upUmenEventValue(mContext, "QQ账号登陆", "fmLogin");
+			openState = 1;
+			authorize(new QQ(this));
+
+		} else if (view == weiboIb) {// 微博登陆
+			client = "微博";
+			MinUtil.upUmenEventValue(mContext, "微博账号登陆", "fmLogin");
+			openState = 2;
+			authorize(new SinaWeibo(this));
+		} else if (view == wechat) {// 微信登陆
+			client = "微信";
+			MinUtil.upUmenEventValue(mContext, "微信账号登陆", "fmLogin");
+			openState = 3;
+			authorize(new Wechat(this));
+		} else if (view == phoneLoginTv) {// 手机登陆
+			Intent phoneintent = new Intent(LoginActivity.this, PhoneLoginActivity.class);
+			LoginActivity.this.startActivity(phoneintent);
+
+			finish();
+		}
+
+	}
+
+	private static final int MSG_USERID_FOUND = 1;
+	private static final int MSG_LOGIN = 2;
+	private static final int MSG_AUTH_CANCEL = 3;
+	private static final int MSG_AUTH_ERROR = 4;
+	private static final int MSG_AUTH_COMPLETE = 5;
+
+	private void authorize(Platform plat) {
+		if (plat == null) {
+			popupOthers();
+
+			return;
+		}
+
+		if (plat.isValid()) {
+			String userId = plat.getDb().getUserId();
+			if (!TextUtils.isEmpty(userId)) {
+				UIHandler.sendEmptyMessage(MSG_USERID_FOUND, this);
+				login(plat.getName(), userId, null);
+				return;
+			}
+
+		}
+		plat.setPlatformActionListener(this);
+		plat.SSOSetting(false);
+		plat.showUser(null);
+	}
+
+	private void popupOthers() {
+		Dialog dlg = new Dialog(this);
+
+		View dlgView = View.inflate(this, R.layout.fm_other_plat_dialog, null);
+
+		View tvFacebook = dlgView.findViewById(R.id.tvFacebook);
+		tvFacebook.setTag(dlg);
+		tvFacebook.setOnClickListener(this);
+
+		View tvTwitter = dlgView.findViewById(R.id.tvTwitter);
+		tvTwitter.setTag(dlg);
+		tvTwitter.setOnClickListener(this);
+
+		dlg.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		dlg.setContentView(dlgView);
+		dlg.show();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		if (!bitmap.isRecycled()) {
+			bitmap.recycle();
+			System.gc();
+			bitmap = null;
+		}
+		ShareSDK.stopSDK(this);
+	}
+
+	public void onComplete(Platform platform, int action, HashMap<String, Object> res) {
+
+		if (action == Platform.ACTION_USER_INFOR) {
+			UIHandler.sendEmptyMessage(MSG_AUTH_COMPLETE, this);
+			login(platform.getName(), platform.getDb().getUserId(), res);
+		}
+
+		if (openState == 1) {
+
+			String openId = platform.getDb().getUserId();
+			// MinUtil.mylog("openId:" + openId);
+			String nickname = res.get("nickname").toString();
+			String sex = res.get("gender").toString();
+			String location = res.get("province").toString() + res.get("city").toString();
+			String figureurl = res.get("figureurl").toString();
+			String channel = "QQ账号";
+
+			new OtherLoginTask(openId, nickname, sex, location, figureurl, channel).execute().toString();
+		}
+		if (openState == 2) {
+
+			String openId = res.get("id").toString();
+			String nickname = res.get("screen_name").toString();
+			String sex = ((res.get("gender").equals("m")) ? "男" : "女").toString();
+			String location = res.get("location").toString();
+			String figureurl = res.get("avatar_large").toString();
+			String channel = "新浪微博";
+			new OtherLoginTask(openId, nickname, sex, location, figureurl, channel).execute().toString();
+		}
+		if (openState == 3) {
+			// String openId = res.get("unionid").toString();
+			String nickname = res.get("nickname").toString();
+			String sex = ((res.get("sex").equals(1)) ? "男" : "女").toString();
+			String location = res.get("city").toString();
+			String figureurl = res.get("headimgurl").toString();
+			String unionid = res.get("unionid").toString();
+			String channel = "微信账号";
+
+			new OtherLoginTask(unionid, nickname, sex, location, figureurl, channel).execute().toString();
+
+		}
+
+	}
+
+	public void onError(Platform platform, int action, Throwable t) {
+
+		UIHandler.sendEmptyMessage(MSG_AUTH_ERROR, this);
+
+		t.printStackTrace();
+	}
+
+	public void onCancel(Platform platform, int action) {
+		if (action == Platform.ACTION_USER_INFOR) {
+			UIHandler.sendEmptyMessage(MSG_AUTH_CANCEL, this);
+		}
+	}
+
+	private void login(String plat, String userId, HashMap<String, Object> userInfo) {
+		Message msg = new Message();
+		msg.what = MSG_LOGIN;
+		msg.obj = plat;
+		UIHandler.sendMessage(msg, this);
+	}
+
+	public boolean handleMessage(Message msg) {
+		String text;
+		switch (msg.what) {
+
+		case MSG_USERID_FOUND: {
+			text = getString(MResource.getIdByName(getApplication(), "string", "fm_userid_found"));
+			MinUtil.showToast(mContext, text);
+		}
+			break;
+		case MSG_LOGIN: {
+
+			text = getString(MResource.getIdByName(getApplication(), "string", "fm_logining"), msg.obj);
+			MinUtil.showToast(mContext, text);
+			// TODO
+		}
+			break;
+		case MSG_AUTH_CANCEL: {
+			text = getString(MResource.getIdByName(getApplication(), "string", "fm_auth_cancel"));
+			MinUtil.showToast(mContext, text);
+		}
+			break;
+		case MSG_AUTH_ERROR: {
+
+			text = getString(MResource.getIdByName(getApplication(), "string", "fm_auth_error"));
+			MinUtil.showToast(mContext, text + "," + RUtils.getRString("fm_suer_install") + client);
+		}
+			break;
+		case MSG_AUTH_COMPLETE: {
+
+			text = getString(MResource.getIdByName(getApplication(), "string", "fm_auth_complete"));
+			MinUtil.showToast(mContext, text);
+		}
+			break;
+		}
+		return false;
+	}
+
+	private UserEntity userEntity;
+
+	private class OtherLoginTask extends AsyncTask<Void, Void, String> {
+		String openId = "";// ID
+		String name = "";// 昵称
+		String sex;// 性别
+		String location;// 位置
+		String figureurl;// 头像链接
+		String channel;// 登陆方式
+
+		/**
+		 * 第三方登陆
+		 * 
+		 * @param openId
+		 *            ID
+		 * @param name
+		 *            昵称
+		 * @param sex
+		 *            性别
+		 * @param location
+		 *            位置
+		 * @param figureurl
+		 *            头像链接
+		 * @param channel
+		 *            第三方登陆方式
+		 */
+		public OtherLoginTask(String openId, String name, String sex, String location, String figureurl, String channel) {
+			this.openId = openId;
+			this.name = name;
+			this.sex = sex;
+			this.location = location;
+			this.figureurl = figureurl;
+			this.channel = channel;
+
+		}
+
+		@Override
+		protected String doInBackground(Void... voids) {
+			userEntity = JsonHelper.getOtherUser(LoginActivity.this, openId, name, sex, location, figureurl);
+			if (userEntity != null) {
+				ExApplication.MEMBER_ID = userEntity.getId();
+				return "s";
+			}
+
+			return "";
+		}
+
+		@Override
+		protected void onPostExecute(String s) {
+			super.onPostExecute(s);
+			if (s.equals("s")) {// 如果能获取到用户信息，跳转到个人中心
+				Message msg = new Message();
+				msg.what = 1;
+				// 登陆方式
+				msg.obj = channel;
+
+				FMMainActivity.handler.sendMessage(msg);
+				finish();
+			} else {
+				// MinUtil.mylog("获取不到用户信息");
+			}
+		}
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		finish();
+	}
+
+	public void onEventMainThread(EmptyEntity event) {
+
+	}
+
+}

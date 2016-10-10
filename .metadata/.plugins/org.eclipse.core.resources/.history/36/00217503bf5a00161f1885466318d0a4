@@ -1,0 +1,182 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="ShareSDKAnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="btn_custom_style">
+        <item name="android:layout_width">48dip</item>
+        <item name="android:layout_height">48dip</item>
+        <item name="android:layout_gravity">center|right</item>
+        <item name="android:background">?android:listChoiceBackgroundIndicator</item>
+    </style>
+
+    <style name="Widget.Holo.Button.Borderless" parent="@style/Widget.Holo.Button">
+        <item name="android:background">@drawable/item_background_holo_light</item>
+        <item name="android:paddingLeft">4.0dip</item>
+        <item name="android:paddingRight">4.0dip</item>
+    </style>
+
+    <style name="Widget.Holo.Button" parent="@style/Widget.Button">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@color/primary_text_holo_dark</item>
+        <item name="android:background">@drawable/btn_default_holo_dark</item>
+        <item name="android:minWidth">64.0dip</item>
+        <item name="android:minHeight">48.0dip</item>
+    </style>
+
+    <style name="Widget.Holo.Button.Small" parent="@style/Widget.Holo.Button">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">@color/primary_text_holo_dark</item>
+        <item name="android:background">@drawable/btn_default_holo_dark</item>
+        <item name="android:minWidth">48.0dip</item>
+        <item name="android:minHeight">48.0dip</item>
+    </style>
+
+    <style name="Widget.Button" parent="@android:style/Widget">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmallInverse</item>
+        <item name="android:textColor">@android:color/primary_text_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@android:drawable/btn_default</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="NotificationContent">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="NotificationTitle">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="borderlessButtonStyle" parent="@style/Widget.Holo.Button.Borderless"></style>
+
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="dialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="self_define_ProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/self_define_progress</item>
+    </style>
+
+    <style name="MMTabButton">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:drawablePadding">-10dp</item>
+        <item name="android:scaleX">1</item>
+        <item name="android:scaleY">1</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="FMloginButton">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <!-- 帮助与教程文字样式 -->
+    <style name="ScreenCourseTextStyle">
+        <item name="android:gravity">left</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ScreenCourseTextStyle2">
+        <item name="android:gravity">left</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">35dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 帮助与教程图片样式 -->
+    <style name="ScreenCoursePicStyle">
+        <item name="android:visibility">visible</item>
+    </style>
+    <!-- 关于我们箭头样式 -->
+    <style name="AboutUsArrowStyle">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:background">@drawable/arrow_right</item>
+        <item name="android:gravity">center_vertical|right</item>
+    </style>
+    <!-- 计时浮窗文字样式 -->
+    <style name="FloatViewTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_marginTop">-3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="FloatViewImageStyle">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="registerButtonTrueStyle">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@drawable/btn_style_move_2</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+</resources>

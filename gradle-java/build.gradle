@@ -1,0 +1,44 @@
+// buildscript {
+//     repositories {
+//         mavenCentral()
+//     }
+
+//     dependencies {
+//         classpath 'com.android.tools.build:gradle:0.11.1'
+//     }
+// }
+
+// apply plugin: 'java'
+
+task sayHello1 << {
+    println "Hello World 1"
+}
+
+task sayHello2 {
+   doLast {
+      println 'Hello World 2'}
+}
+
+task sayHello3 {
+   doFirst {
+      println 'Hello World 3'}
+}
+
+task sayHello() {
+       println 'Hello World'
+       doFirst {        
+              println 'Hello World First'
+       }    
+       println 'Hello World'
+       doLast {        
+              println 'Hello World Last'
+       }
+       println 'Hello World'
+}
+
+task copyFiles(type: Copy){
+    from "src"
+    into "dst"
+}
+
+
